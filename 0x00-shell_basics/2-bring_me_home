@@ -1,2 +1,2 @@
-#!/bin/bash
-cd __home__ 
+#!bin/bash
+cd
