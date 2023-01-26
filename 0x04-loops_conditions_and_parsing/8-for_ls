@@ -3,7 +3,7 @@
 # in a list format
 # where only the part of the name after the first dash is displayed
 
-for content in $(ls)
+for content in *
 do
-	echo "$content"
+	echo "$content" | cut -d - -f 2
 done
