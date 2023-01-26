@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# A script that gives information about the school file
+
+file school
+status=$?
+
+if [[status > 0]]
+then
+	echo "school file does not exist"
+else
+	echo "school file exists
+
