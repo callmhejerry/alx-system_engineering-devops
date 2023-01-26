@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# A bash script that displayed the content directory
+# in a list format
+# where only the part of the name after the first dash is displayed
+
+for content in *
+do
+	echo "$content"
+done
