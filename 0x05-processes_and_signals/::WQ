@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# A script that stops 4-to_infinity_and_beyond
-
-pid=$(pidof ./4-to_infinity_and_beyond)
-kill -n 9 $pid
