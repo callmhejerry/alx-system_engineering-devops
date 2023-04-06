@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A script that installs a webserver [NGINX] on a server
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install nginx -y
+sudo service nginx start
+echo "Hello World!" | tee  /var/www/html/index.nginx-debian.html
+sudo service nginx restart
