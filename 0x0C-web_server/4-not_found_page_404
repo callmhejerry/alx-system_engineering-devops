@@ -9,6 +9,6 @@ replacement="server_name _;\n\trewrite ^\/redirect_me to https:\/\/github.com/ca
 sudo sed -i "s/server_name _;/$replacement/" /etc/nginx/sites-enabled/default
 
 echo "Ceci n'est pas une page" | sudo tee  /var/www/html/custom_error.html
-error_replacement="\terror_page 404 \/custom_error.html\n\tlocation = \/custom_error.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
-sudo sed -i "/server_name _;/a $error_replacement" /etc/nginx/sites-enabled/default
+error_string="listen 80 default_server;\n\terror_page 404 \/custom_error.html;\n\tlocation = \/custom_error.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+sudo sed -i "s/listen 80 default_server;/$error_string/" /etc/nginx/sites-enabled/default
 sudo service nginx start
