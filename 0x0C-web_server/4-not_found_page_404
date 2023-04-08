@@ -4,4 +4,4 @@ sudo apt update -y
 sudo apt install nginx -y
 echo "Ceci n'est pas une page" > /var/www/html/custom_error.html
 sed -i '/server_name _;/a \\terror_page 404 \/custom_error.html;' /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo service nginx start
