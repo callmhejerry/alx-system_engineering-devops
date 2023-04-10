@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# configure an apache server
+
+mkdir -p /var/www/apache
+touch /var/www/apache/index.html
+echo "Hello Holberton" > /var/www/apache/index.html
+
+sed -i 's/ServerAdmin webmaster@localhost/ServerAdmin webmaster@0.0.0.0/' /etc/apache2/sites-available/000-default.conf
+sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf
+sed -i "s/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/apache/" /etc/apache2/sites-available/000-default.conf
