@@ -1,3 +1,5 @@
+# configuration for the nginx server
+
 package { 'nginx':
   name		   => 'nginx',
   ensure	   => installed,
