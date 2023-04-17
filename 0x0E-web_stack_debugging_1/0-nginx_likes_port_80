@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # debug web server to make sure nginx is running on port 80
-lsof -i :80 | grep LISTEN | awk '{print $2}' | xargs kill
-sudo service nginx start
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
