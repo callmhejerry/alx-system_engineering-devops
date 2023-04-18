@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# setting up firewall to block all incoming traffic except
+sudo apt install ufw
+sudo ufw allow ssh
+sudo ufw allow 443
+sudo ufw allow 80
+sudo ufw enable
