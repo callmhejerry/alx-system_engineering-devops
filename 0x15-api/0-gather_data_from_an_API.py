@@ -31,5 +31,6 @@ if __name__ == '__main__':
                                                               number_of_todo))
 
         for todo in todo_data:
-            title = todo.get('title')
-            print('\t {}'.format(title))
+            if todo.get('completed'):
+                title = todo.get('title')
+                print('\t {}'.format(title))
