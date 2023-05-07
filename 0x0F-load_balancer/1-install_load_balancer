@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# A script to configure A load balancer
 
 #install haproxy
 sudo apt update
