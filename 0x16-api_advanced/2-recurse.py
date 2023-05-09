@@ -11,7 +11,7 @@ the given subreddit, the function should return None.
 import requests
 
 
-def recurse(subreddit, hot_list=[], after=0, count=0):
+def recurse(subreddit, hot_list=[], after="", count=0):
     """
     return list containing titles of all articles
     """
