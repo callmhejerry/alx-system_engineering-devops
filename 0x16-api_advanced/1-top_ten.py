@@ -13,7 +13,7 @@ def top_ten(subreddit):
     """
     return the first 10 post of a subreddit
     """
-    url = "https://www.reddit.com/r/{}/new.json".format(subreddit)
+    url = "https://www.reddit.com/r/{}.json".format(subreddit)
     params = {
         'limit': 10,
     }
