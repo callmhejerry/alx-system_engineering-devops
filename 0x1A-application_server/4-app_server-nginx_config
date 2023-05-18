@@ -1,0 +1,15 @@
+server {
+        listen 80;
+
+        server_name localhost 127.0.0.1 54.90.61.225;
+        location / {
+                proxy_pass http://localhost:5000;
+        }
+        location ~ ^/airbnb-dynamic/number_odd_or_even/(.*)$ {
+                rewrite ^/airbnb-dynamic/number_odd_or_even/(.*) /number_odd_or_even/$1 break;
+                proxy_pass http://localhost:5001;
+        }
+        location /api/ {
+                proxy_pass http://localhost:5002;
+        }
+}
